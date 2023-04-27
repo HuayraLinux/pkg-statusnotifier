@@ -1,0 +1,25 @@
+Source: statusnotifier
+Priority: extra
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), pkg-config, dh-autoreconf, libgtk-3-dev, libglib2.0-dev, gtk-doc-tools
+Standards-Version: 3.9.1
+Section: libs
+Homepage: https://github.com/jjk-jacky/statusnotifier
+Vcs-Git: git@github.com:jjk-jacky/statusnotifier.git
+Vcs-Browser: https://github.com/jjk-jacky/statusnotifier
+
+Package: libstatusnotifier-dev
+Section: libdevel
+Architecture: any
+Depends: libstatusnotifier (=${binary:Version}) , ${misc:Depends}
+Description: libstatusnotifier development headers
+ libstatusnotifier is a ibrary to use KDE's StatusNotifierItem via
+ GObject
+
+Package: libstatusnotifier
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: An unofficial C-API to the Last.fm web service
+ libstatusnotifier is a ibrary to use KDE's StatusNotifierItem via
+ GObject
